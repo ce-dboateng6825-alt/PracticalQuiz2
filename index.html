@@ -5,29 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Tea Table</title>
     <script src="aframe.min.js"></script>
-    <style>
-      .hut-sign {
-        position: fixed;
-        z-index: 20;
-        top: 19.5%;
-        left: 50%;
-        transform: translateX(-50%);
-        min-width: 31%;
-        padding: 10px 18px 8px;
-        border: 3px solid #7c5235;
-        border-radius: 8px;
-        background: #fff4cf;
-        color: #74472f;
-        font: 700 clamp(18px, 2.2vw, 34px) Georgia, serif;
-        text-align: center;
-        letter-spacing: 1.5px;
-        box-shadow: 0 4px 12px rgba(74, 54, 35, 0.28);
-        pointer-events: none;
-      }
-    </style>
   </head>
   <body>
-    <div class="hut-sign">Danny's Mini Hut</div>
     <a-scene
       background="color: #86c7e8"
       fog="type: linear; color: #bdd8a6; near: 18; far: 38"
@@ -152,15 +131,15 @@
         <a-cylinder position="0 7.08 -2.7" radius="0.76" height="0.22" color="#6f4a31"></a-cylinder>
         <a-torus position="0 7.2 -2.7" radius="0.7" radius-tubular="0.1" color="#b77b45"></a-torus>
 
-        <a-box position="0 4.28 1.02" width="5.6" height="0.72" depth="0.16" color="#5b9d79"></a-box>
-        <a-box position="0 4.28 1.12" width="5.35" height="0.52" depth="0.08" color="#fff4cf"></a-box>
+        <a-box position="0 4.06 1.55" width="6.4" height="0.92" depth="0.18" color="#3e7254"></a-box>
+        <a-box position="0 4.06 1.66" width="6.1" height="0.72" depth="0.08" color="#fff4cf"></a-box>
         <a-text
           value="DANNY'S MINI HUT"
-          position="0 4.28 1.25"
+          position="0 4.06 1.74"
           align="center"
-          color="#8b5635"
-          width="5.2"
-          scale="1.05 1.05 1.05"
+          color="#4d2f20"
+          width="8"
+          scale="1.35 1.35 1.35"
           side="double"
         ></a-text>
 
@@ -193,10 +172,56 @@
       </a-entity>
 
       <a-entity id="garden-path">
-        <a-box position="0 0.13 2.3" width="1.55" height="0.12" depth="0.82" color="#eee0bf"></a-box>
-        <a-box position="0 0.13 1.25" width="1.55" height="0.12" depth="0.82" color="#eee0bf"></a-box>
-        <a-box position="0 0.13 0.2" width="1.55" height="0.12" depth="0.82" color="#eee0bf"></a-box>
-        <a-box position="0 0.13 -0.85" width="1.55" height="0.12" depth="0.82" color="#eee0bf"></a-box>
+        <a-box position="0 0.14 11" width="4.2" height="0.12" depth="14" color="#d7c79f"></a-box>
+        <a-box position="0 0.15 11" width="3.35" height="0.03" depth="13.8" color="#eee0b8"></a-box>
+        <a-box position="0 0.14 2.3" width="2.65" height="0.12" depth="1.1" color="#c7b58a"></a-box>
+        <a-box position="0 0.14 1.15" width="2.65" height="0.12" depth="1.1" color="#e5d7ac"></a-box>
+        <a-box position="0 0.14 0" width="2.65" height="0.12" depth="1.1" color="#c7b58a"></a-box>
+        <a-box position="0 0.14 -1.15" width="2.65" height="0.12" depth="1.1" color="#e5d7ac"></a-box>
+
+        <a-box position="-1.55 0.18 7.5" width="0.08" height="0.08" depth="6.8" color="#9a8461"></a-box>
+        <a-box position="1.55 0.18 7.5" width="0.08" height="0.08" depth="6.8" color="#9a8461"></a-box>
+
+        <a-entity id="roadside-garden">
+          <a-cylinder position="-3.05 1.15 6.8" radius="0.16" height="2.3" color="#755139"></a-cylinder>
+          <a-sphere position="-3.05 2.75 6.8" radius="1.05" color="#397e49"></a-sphere>
+          <a-sphere position="-3.65 2.5 6.8" radius="0.72" color="#58a85f"></a-sphere>
+          <a-sphere position="-2.45 2.5 6.8" radius="0.72" color="#69b96b"></a-sphere>
+          <a-sphere position="-3.45 3.25 6.75" radius="0.28" color="#f8b6d3"></a-sphere>
+          <a-sphere position="-2.72 3.28 6.72" radius="0.25" color="#ffe7a1"></a-sphere>
+          <a-sphere position="-3.05 3.48 6.78" radius="0.22" color="#d9a0df"></a-sphere>
+
+          <a-cylinder position="3.05 1.15 6.8" radius="0.16" height="2.3" color="#755139"></a-cylinder>
+          <a-sphere position="3.05 2.75 6.8" radius="1.05" color="#397e49"></a-sphere>
+          <a-sphere position="2.45 2.5 6.8" radius="0.72" color="#58a85f"></a-sphere>
+          <a-sphere position="3.65 2.5 6.8" radius="0.72" color="#69b96b"></a-sphere>
+          <a-sphere position="2.65 3.25 6.75" radius="0.28" color="#f8b6d3"></a-sphere>
+          <a-sphere position="3.38 3.28 6.72" radius="0.25" color="#ffe7a1"></a-sphere>
+          <a-sphere position="3.05 3.48 6.78" radius="0.22" color="#d9a0df"></a-sphere>
+
+          <a-cylinder position="-3.2 0.72 3.6" radius="0.12" height="1.44" color="#76543b"></a-cylinder>
+          <a-sphere position="-3.2 2.15 3.6" radius="0.9" color="#4c9651"></a-sphere>
+          <a-sphere position="-3.75 1.85 3.55" radius="0.58" color="#70b85f"></a-sphere>
+          <a-sphere position="-2.65 1.85 3.55" radius="0.58" color="#80c76b"></a-sphere>
+          <a-sphere position="-3.45 2.55 3.58" radius="0.18" color="#fff0a0"></a-sphere>
+          <a-sphere position="-2.95 2.48 3.58" radius="0.18" color="#f59bb7"></a-sphere>
+
+          <a-cylinder position="3.2 0.72 3.6" radius="0.12" height="1.44" color="#76543b"></a-cylinder>
+          <a-sphere position="3.2 2.15 3.6" radius="0.9" color="#4c9651"></a-sphere>
+          <a-sphere position="2.65 1.85 3.55" radius="0.58" color="#70b85f"></a-sphere>
+          <a-sphere position="3.75 1.85 3.55" radius="0.58" color="#80c76b"></a-sphere>
+          <a-sphere position="2.95 2.55 3.58" radius="0.18" color="#fff0a0"></a-sphere>
+          <a-sphere position="3.45 2.48 3.58" radius="0.18" color="#f59bb7"></a-sphere>
+
+          <a-entity position="-2.2 0 1.45">
+            <a-cylinder position="0 0.9 0" radius="0.04" height="1.8" color="#5e4632"></a-cylinder>
+            <a-sphere position="0 1.85 0" radius="0.18" color="#fff3aa" material="emissive: #ffc85a; emissiveIntensity: 0.9"></a-sphere>
+          </a-entity>
+          <a-entity position="2.2 0 1.45">
+            <a-cylinder position="0 0.9 0" radius="0.04" height="1.8" color="#5e4632"></a-cylinder>
+            <a-sphere position="0 1.85 0" radius="0.18" color="#fff3aa" material="emissive: #ffc85a; emissiveIntensity: 0.9"></a-sphere>
+          </a-entity>
+        </a-entity>
       </a-entity>
 
       <a-entity id="table" position="0 0.22 -2.7">
