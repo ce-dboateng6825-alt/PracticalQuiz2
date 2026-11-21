@@ -5,11 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Garden Tea Table</title>
     <script src="aframe.min.js"></script>
+    <style>
+      .hut-sign {
+        position: fixed;
+        z-index: 20;
+        top: 19.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        min-width: 31%;
+        padding: 10px 18px 8px;
+        border: 3px solid #7c5235;
+        border-radius: 8px;
+        background: #fff4cf;
+        color: #74472f;
+        font: 700 clamp(18px, 2.2vw, 34px) Georgia, serif;
+        text-align: center;
+        letter-spacing: 1.5px;
+        box-shadow: 0 4px 12px rgba(74, 54, 35, 0.28);
+        pointer-events: none;
+      }
+    </style>
   </head>
   <body>
+    <div class="hut-sign">Danny's Mini Hut</div>
     <a-scene
-      background="color: #9bd5f5"
-      fog="type: linear; color: #b6dce9; near: 16; far: 32"
+      background="color: #86c7e8"
+      fog="type: linear; color: #bdd8a6; near: 18; far: 38"
       renderer="colorManagement: true"
     >
       <a-assets>
@@ -17,15 +38,83 @@
         <a-mixin id="chairWood" material="color: #b87945; roughness: 0.68"></a-mixin>
       </a-assets>
 
-      <a-sky color="#9bd5f5"></a-sky>
+      <a-sky color="#86c7e8"></a-sky>
       <a-plane
         position="0 0 0"
         rotation="-90 0 0"
         width="40"
         height="40"
-        color="#48a743"
+        color="#5aa94e"
         roughness="1"
       ></a-plane>
+
+      <a-circle position="-10 3.2 -18" rotation="0 0 0" radius="1.8" color="#f7dd82" material="shader: flat"></a-circle>
+      <a-circle position="-10 3.2 -17.96" radius="2.35" color="#fff1aa" opacity="0.18" material="transparent: true; shader: flat"></a-circle>
+
+      <a-circle position="-10 3.2 -18" rotation="0 0 0" radius="2.2"
+        material="color: #ffb65a; opacity: 0.15; transparent: true; shader: flat"></a-circle>
+
+      <a-plane position="0 0.08 -19" rotation="-90 0 0" width="32" height="12"
+        color="#79afbd" roughness="0.35" opacity="0.92" material="transparent: true"></a-plane>
+      <a-plane position="0 0.11 -19" rotation="-90 0 0" width="31" height="0.12"
+        color="#d8eef1" opacity="0.7" material="transparent: true"></a-plane>
+      <a-plane position="-8 0.12 -18.2" rotation="-90 0 0" width="7" height="0.08"
+        color="#edf9f7" opacity="0.55" material="transparent: true"></a-plane>
+      <a-plane position="7 0.13 -20" rotation="-90 0 0" width="9" height="0.08"
+        color="#edf9f7" opacity="0.55" material="transparent: true"></a-plane>
+
+      <a-cone position="-17 1.8 -20" radius-bottom="3.8" height="4.2" segments-radial="24" color="#9bc0a7"></a-cone>
+      <a-cone position="-12 2.1 -22" radius-bottom="4.5" height="5" segments-radial="24" color="#82ad96"></a-cone>
+      <a-cone position="14 2.2 -21" radius-bottom="4.6" height="5.2" segments-radial="24" color="#82ad96"></a-cone>
+      <a-cone position="18 1.7 -19" radius-bottom="3.7" height="4" segments-radial="24" color="#9bc0a7"></a-cone>
+
+      <a-cone position="-13 2.2 -24" radius-bottom="5.2" height="5" segments-radial="24" color="#789da0"></a-cone>
+      <a-cone position="-7 2.8 -25" radius-bottom="6.2" height="6" segments-radial="24" color="#8ba7a0"></a-cone>
+      <a-cone position="1 2.5 -26" radius-bottom="7" height="5.5" segments-radial="24" color="#829d96"></a-cone>
+      <a-cone position="10 3 -25" radius-bottom="6.5" height="7" segments-radial="24" color="#8ba7a0"></a-cone>
+      <a-cone position="16 2.2 -24" radius-bottom="5.2" height="5" segments-radial="24" color="#789da0"></a-cone>
+
+      <a-entity position="-8 8 -14">
+        <a-sphere position="-1.2 0 0" radius="0.75" color="#ffffff"></a-sphere>
+        <a-sphere position="-0.45 0.25 0" radius="1" color="#ffffff"></a-sphere>
+        <a-sphere position="0.55 0.05 0" radius="0.82" color="#ffffff"></a-sphere>
+        <a-sphere position="1.25 -0.12 0" radius="0.58" color="#ffffff"></a-sphere>
+      </a-entity>
+      <a-entity position="8.5 9.2 -16">
+        <a-sphere position="-1 0 0" radius="0.62" color="#ffffff"></a-sphere>
+        <a-sphere position="-0.35 0.22 0" radius="0.88" color="#ffffff"></a-sphere>
+        <a-sphere position="0.55 0.02 0" radius="0.72" color="#ffffff"></a-sphere>
+        <a-sphere position="1.15 -0.1 0" radius="0.48" color="#ffffff"></a-sphere>
+      </a-entity>
+
+      <a-entity id="background-trees">
+        <a-cylinder position="-11 1.15 -15" radius="0.16" height="2.3" color="#6f4a2f"></a-cylinder>
+        <a-sphere position="-11 2.8 -15" radius="1.15" color="#3d8b52"></a-sphere>
+        <a-sphere position="-11.55 2.55 -15" radius="0.75" color="#56a85d"></a-sphere>
+        <a-sphere position="-10.45 2.55 -15" radius="0.75" color="#68b764"></a-sphere>
+
+        <a-cylinder position="11 1.25 -15" radius="0.17" height="2.5" color="#6f4a2f"></a-cylinder>
+        <a-sphere position="11 2.95 -15" radius="1.2" color="#3d8b52"></a-sphere>
+        <a-sphere position="10.42 2.68 -15" radius="0.78" color="#56a85d"></a-sphere>
+        <a-sphere position="11.55 2.68 -15" radius="0.78" color="#68b764"></a-sphere>
+
+        <a-cylinder position="-15 0.9 -17" radius="0.13" height="1.8" color="#75523a"></a-cylinder>
+        <a-sphere position="-15 2.15 -17" radius="0.85" color="#4a9652"></a-sphere>
+        <a-cylinder position="15 0.9 -17" radius="0.13" height="1.8" color="#75523a"></a-cylinder>
+        <a-sphere position="15 2.15 -17" radius="0.85" color="#4a9652"></a-sphere>
+      </a-entity>
+
+      <a-entity id="birds" position="0 7 -14">
+        <a-torus position="-5 0 0" rotation="0 0 25" radius="0.32" radius-tubular="0.025" arc="180" color="#4e6672"></a-torus>
+        <a-torus position="-4.35 0.08 0" rotation="0 0 -25" radius="0.32" radius-tubular="0.025" arc="180" color="#4e6672"></a-torus>
+        <a-torus position="5.2 0.55 0" rotation="0 0 25" radius="0.25" radius-tubular="0.02" arc="180" color="#4e6672"></a-torus>
+        <a-torus position="5.72 0.62 0" rotation="0 0 -25" radius="0.25" radius-tubular="0.02" arc="180" color="#4e6672"></a-torus>
+      </a-entity>
+
+      <a-plane position="-10 2.4 -17.92" rotation="0 0 0" width="5.2" height="0.22"
+        color="#ffd97f" opacity="0.28" material="transparent: true; shader: flat"></a-plane>
+      <a-plane position="-10 2.1 -17.91" rotation="0 0 0" width="4.2" height="0.16"
+        color="#fff1b0" opacity="0.22" material="transparent: true; shader: flat"></a-plane>
 
       <a-cylinder
         position="0 0.09 -2.7"
@@ -40,6 +129,48 @@
         height="0.05"
         color="#c6a978"
       ></a-cylinder>
+
+      <a-entity id="outer-mini-hut">
+        <a-cylinder position="-6.4 2.65 1.05" radius="0.19" height="5.3" color="#7a5034"></a-cylinder>
+        <a-cylinder position="6.4 2.65 1.05" radius="0.19" height="5.3" color="#7a5034"></a-cylinder>
+        <a-cylinder position="-6.4 2.65 -6.45" radius="0.19" height="5.3" color="#7a5034"></a-cylinder>
+        <a-cylinder position="6.4 2.65 -6.45" radius="0.19" height="5.3" color="#7a5034"></a-cylinder>
+        <a-cylinder position="-4.55 2.65 -0.02" radius="0.15" height="5.3" color="#94643e"></a-cylinder>
+        <a-cylinder position="4.55 2.65 -0.02" radius="0.15" height="5.3" color="#94643e"></a-cylinder>
+        <a-cylinder position="-4.55 2.65 -5.38" radius="0.15" height="5.3" color="#94643e"></a-cylinder>
+        <a-cylinder position="4.55 2.65 -5.38" radius="0.15" height="5.3" color="#94643e"></a-cylinder>
+
+        <a-torus position="0 5.15 -2.7" rotation="90 0 0" radius="6.45" radius-tubular="0.16" color="#6f4a31"></a-torus>
+        <a-cone
+          position="0 6.05 -2.7"
+          radius-bottom="7.45"
+          radius-top="0.72"
+          height="1.8"
+          segments-radial="32"
+          material="color: #dcae62; side: double; roughness: 0.85"
+        ></a-cone>
+        <a-cylinder position="0 7.08 -2.7" radius="0.76" height="0.22" color="#6f4a31"></a-cylinder>
+        <a-torus position="0 7.2 -2.7" radius="0.7" radius-tubular="0.1" color="#b77b45"></a-torus>
+
+        <a-box position="0 4.28 1.02" width="5.6" height="0.72" depth="0.16" color="#5b9d79"></a-box>
+        <a-box position="0 4.28 1.12" width="5.35" height="0.52" depth="0.08" color="#fff4cf"></a-box>
+        <a-text
+          value="DANNY'S MINI HUT"
+          position="0 4.28 1.25"
+          align="center"
+          color="#8b5635"
+          width="5.2"
+          scale="1.05 1.05 1.05"
+          side="double"
+        ></a-text>
+
+        <a-torus position="-6.4 3.78 1.05" rotation="0 0 90" radius="0.28" radius-tubular="0.09" color="#ffd978"
+          material="emissive: #ffb84a; emissiveIntensity: 0.8"></a-torus>
+        <a-torus position="6.4 3.78 1.05" rotation="0 0 90" radius="0.28" radius-tubular="0.09" color="#ffd978"
+          material="emissive: #ffb84a; emissiveIntensity: 0.8"></a-torus>
+        <a-sphere position="0 5.12 1.05" radius="0.16" color="#fff0ad"
+          material="emissive: #ffc95c; emissiveIntensity: 1"></a-sphere>
+      </a-entity>
 
       <a-entity id="summer-hut">
         <a-cylinder position="-4.05 2.1 -2.7" radius="0.16" height="4.2" color="#8f5a37"></a-cylinder>
@@ -138,14 +269,46 @@
         <a-entity position="-1.55 1.84 0.48">
           <a-cylinder position="0 0.17 0" radius="0.19" height="0.34" color="#f3eee1"></a-cylinder>
           <a-cylinder position="0 0.345 0" radius="0.18" height="0.025" color="#faf6ed"></a-cylinder>
-          <a-cylinder position="0 0.36 0" radius="0.14" height="0.012" color="#79583c"></a-cylinder>
+          <a-cylinder position="0 0.36 0" radius="0.145" height="0.012" color="#79583c"></a-cylinder>
           <a-torus position="0.2 0.2 0" radius="0.12" radius-tubular="0.028" color="#f3eee1"></a-torus>
+          <a-sphere position="-0.07 0.46 0" radius="0.055" color="#dce7e8" opacity="0.82" material="transparent: true"
+            animation="property: position; to: -0.14 1.25 0.05; dur: 2200; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-sphere position="0.06 0.51 0" radius="0.052" color="#f4f8f8" opacity="0.75" material="transparent: true"
+            animation="property: position; to: 0.13 1.38 -0.05; dur: 2700; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-sphere position="0 0.58 0" radius="0.046" color="#bfcfd1" opacity="0.68" material="transparent: true"
+            animation="property: position; to: 0.03 1.52 0.08; dur: 3200; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-torus position="-0.08 0.54 0" rotation="90 0 0" radius="0.075" radius-tubular="0.016" color="#dfe9ea" opacity="0.82" material="transparent: true"
+            animation="property: position; to: -0.12 1.08 0.03; dur: 2400; easing: easeInOutSine; loop: true"></a-torus>
+          <a-torus position="0.08 0.62 0" rotation="90 0 0" radius="0.065" radius-tubular="0.014" color="#f3f7f7" opacity="0.78" material="transparent: true"
+            animation="property: position; to: 0.13 1.18 -0.03; dur: 2800; easing: easeInOutSine; loop: true"></a-torus>
+          <a-sphere position="-0.02 0.58 0" radius="0.095" color="#f7fbfb" opacity="0.88" material="transparent: true"
+            animation="property: position; to: -0.12 1.7 0.08; dur: 2600; easing: easeOutSine; loop: true"></a-sphere>
+          <a-sphere position="0.09 0.64 0" radius="0.085" color="#cfdede" opacity="0.82" material="transparent: true"
+            animation="property: position; to: 0.18 1.82 -0.06; dur: 3100; easing: easeOutSine; loop: true"></a-sphere>
+          <a-torus position="0 0.72 0" rotation="90 0 0" radius="0.12" radius-tubular="0.025" color="#edf6f6" opacity="0.86" material="transparent: true"
+            animation="property: position; to: 0.08 1.55 0.04; dur: 2800; easing: easeInOutSine; loop: true"></a-torus>
         </a-entity>
         <a-entity position="1.55 1.84 0.48">
           <a-cylinder position="0 0.17 0" radius="0.19" height="0.34" color="#dcecf2"></a-cylinder>
           <a-cylinder position="0 0.345 0" radius="0.18" height="0.025" color="#edf8fa"></a-cylinder>
           <a-cylinder position="0 0.36 0" radius="0.14" height="0.012" color="#a8d7e1"></a-cylinder>
           <a-torus position="0.2 0.2 0" radius="0.12" radius-tubular="0.028" color="#dcecf2"></a-torus>
+          <a-sphere position="-0.05 0.47 0" radius="0.052" color="#dce7e8" opacity="0.82" material="transparent: true"
+            animation="property: position; to: -0.12 1.26 0.04; dur: 2300; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-sphere position="0.07 0.52 0" radius="0.048" color="#f4f8f8" opacity="0.75" material="transparent: true"
+            animation="property: position; to: 0.13 1.38 -0.04; dur: 2900; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-sphere position="0 0.59 0" radius="0.043" color="#bfcfd1" opacity="0.68" material="transparent: true"
+            animation="property: position; to: 0.03 1.5 0.06; dur: 3300; easing: easeInOutSine; loop: true"></a-sphere>
+          <a-torus position="-0.06 0.55 0" rotation="90 0 0" radius="0.072" radius-tubular="0.015" color="#dfe9ea" opacity="0.82" material="transparent: true"
+            animation="property: position; to: -0.12 1.1 0.03; dur: 2400; easing: easeInOutSine; loop: true"></a-torus>
+          <a-torus position="0.07 0.63 0" rotation="90 0 0" radius="0.062" radius-tubular="0.014" color="#f3f7f7" opacity="0.78" material="transparent: true"
+            animation="property: position; to: 0.13 1.2 -0.03; dur: 2800; easing: easeInOutSine; loop: true"></a-torus>
+          <a-sphere position="-0.02 0.58 0" radius="0.095" color="#f7fbfb" opacity="0.88" material="transparent: true"
+            animation="property: position; to: -0.12 1.68 0.08; dur: 2600; easing: easeOutSine; loop: true"></a-sphere>
+          <a-sphere position="0.09 0.64 0" radius="0.085" color="#cfdede" opacity="0.82" material="transparent: true"
+            animation="property: position; to: 0.18 1.8 -0.06; dur: 3100; easing: easeOutSine; loop: true"></a-sphere>
+          <a-torus position="0 0.72 0" rotation="90 0 0" radius="0.12" radius-tubular="0.025" color="#edf6f6" opacity="0.86" material="transparent: true"
+            animation="property: position; to: 0.08 1.54 0.04; dur: 2800; easing: easeInOutSine; loop: true"></a-torus>
         </a-entity>
       </a-entity>
 
@@ -185,9 +348,78 @@
         <a-sphere position="5.45 1.34 -2.3" radius="0.12" color="#f6d46b"></a-sphere>
       </a-entity>
 
-      <a-entity light="type: ambient; intensity: 0.78"></a-entity>
-      <a-entity light="type: directional; intensity: 0.9" position="-4 8 5"></a-entity>
-      <a-entity light="type: point; intensity: 0.25; distance: 18" position="0 5 -4"></a-entity>
+      <a-entity id="flower-beds">
+        <a-cylinder position="-6.8 0.12 -7" radius="0.9" height="0.24" color="#9b6845"></a-cylinder>
+        <a-cylinder position="6.8 0.12 -7" radius="0.9" height="0.24" color="#9b6845"></a-cylinder>
+        <a-sphere position="-7.15 0.45 -7" radius="0.22" color="#f6a6ba"></a-sphere>
+        <a-sphere position="-6.75 0.48 -6.8" radius="0.22" color="#fff2a8"></a-sphere>
+        <a-sphere position="-6.45 0.43 -7.15" radius="0.22" color="#df8bdb"></a-sphere>
+        <a-sphere position="6.45 0.45 -7" radius="0.22" color="#ffad79"></a-sphere>
+        <a-sphere position="6.82 0.48 -6.8" radius="0.22" color="#f6a6ba"></a-sphere>
+        <a-sphere position="7.16 0.43 -7.15" radius="0.22" color="#fff2a8"></a-sphere>
+        <a-box position="-6.8 0.62 -7" width="0.06" height="0.65" depth="0.06" color="#39773a"></a-box>
+        <a-box position="6.8 0.62 -7" width="0.06" height="0.65" depth="0.06" color="#39773a"></a-box>
+        <a-cylinder position="-7.2 0.14 0.8" radius="0.55" height="0.28" color="#bd8054"></a-cylinder>
+        <a-cylinder position="7.2 0.14 0.8" radius="0.55" height="0.28" color="#bd8054"></a-cylinder>
+        <a-sphere position="-7.5 0.48 0.8" radius="0.22" color="#ef9fbd"></a-sphere>
+        <a-sphere position="-7.05 0.5 0.65" radius="0.2" color="#ffe58d"></a-sphere>
+        <a-sphere position="-6.95 0.48 0.98" radius="0.18" color="#dc88cf"></a-sphere>
+        <a-sphere position="6.95 0.48 0.8" radius="0.22" color="#ef9fbd"></a-sphere>
+        <a-sphere position="7.35 0.5 0.65" radius="0.2" color="#ffe58d"></a-sphere>
+        <a-sphere position="7.48 0.48 0.98" radius="0.18" color="#dc88cf"></a-sphere>
+        <a-sphere position="-5.1 0.42 -7.9" radius="0.18" color="#ffcf78"></a-sphere>
+        <a-sphere position="-4.7 0.44 -8.1" radius="0.17" color="#f58dac"></a-sphere>
+        <a-sphere position="5.1 0.42 -7.9" radius="0.18" color="#ffcf78"></a-sphere>
+        <a-sphere position="4.7 0.44 -8.1" radius="0.17" color="#f58dac"></a-sphere>
+      </a-entity>
+
+      <a-entity id="back-fire" position="0 0.05 -6.5">
+        <a-cylinder position="0 0.18 0" radius="1.15" height="0.22" color="#3d3a36"></a-cylinder>
+        <a-cylinder position="0 0.31 0" radius="0.95" height="0.08" color="#d05e32"></a-cylinder>
+        <a-cylinder position="-0.32 0.38 0" rotation="0 0 72" radius="0.08" height="1.15" color="#59301f"></a-cylinder>
+        <a-cylinder position="0.32 0.38 0" rotation="0 0 -72" radius="0.08" height="1.15" color="#6b3b23"></a-cylinder>
+        <a-cylinder position="0 0.34 0.28" rotation="90 0 0" radius="0.07" height="1.05" color="#4d2b1c"></a-cylinder>
+        <a-cone position="-0.38 0.58 0" radius-bottom="0.22" radius-top="0.02" height="0.7" color="#ff5a1f"
+          animation="property: scale; to: 1.12 1.25 1.12; dur: 420; dir: alternate; loop: true"></a-cone>
+        <a-cone position="0.38 0.62 0" radius-bottom="0.24" radius-top="0.02" height="0.82" color="#ff9c21"
+          animation="property: scale; to: 0.92 1.18 0.92; dur: 360; dir: alternate; loop: true"></a-cone>
+        <a-cone position="0 0.72 -0.08" radius-bottom="0.34" radius-top="0.03" height="1.05" color="#ffd34d"
+          material="emissive: #ff8a18; emissiveIntensity: 0.9"
+          animation="property: scale; to: 1.08 1.16 1.08; dur: 300; dir: alternate; loop: true"></a-cone>
+        <a-sphere position="-0.75 0.43 0.15" radius="0.04" color="#ffb32b"
+          material="emissive: #ff6a00; emissiveIntensity: 1"
+          animation="property: position; to: -0.9 1.35 0.2; dur: 1600; easing: easeOutQuad; loop: true"></a-sphere>
+        <a-sphere position="0.68 0.46 -0.12" radius="0.035" color="#ffe15a"
+          material="emissive: #ff7b00; emissiveIntensity: 1"
+          animation="property: position; to: 0.82 1.2 -0.18; dur: 1900; easing: easeOutQuad; loop: true"></a-sphere>
+        <a-sphere position="-0.12 0.48 0.62" radius="0.03" color="#ffcf50"
+          material="emissive: #ff5a00; emissiveIntensity: 1"
+          animation="property: position; to: -0.18 1.05 0.74; dur: 1400; easing: easeOutQuad; loop: true"></a-sphere>
+        <a-light type="point" position="0 1.2 0" intensity="1.15" distance="7" decay="2" color="#ff8a35"></a-light>
+      </a-entity>
+
+      <a-entity id="hut-lights">
+        <a-sphere position="-3.1 3.58 -2.7" radius="0.12" color="#ffd978" material="emissive: #ffb84a; emissiveIntensity: 0.9"></a-sphere>
+        <a-sphere position="3.1 3.58 -2.7" radius="0.12" color="#ffd978" material="emissive: #ffb84a; emissiveIntensity: 0.9"></a-sphere>
+        <a-sphere position="-1.55 3.78 -2.7" radius="0.1" color="#ffd978" material="emissive: #ffb84a; emissiveIntensity: 0.7"></a-sphere>
+        <a-sphere position="1.55 3.78 -2.7" radius="0.1" color="#ffd978" material="emissive: #ffb84a; emissiveIntensity: 0.7"></a-sphere>
+        <a-sphere position="0 3.86 -2.7" radius="0.12" color="#ffe8a3" material="emissive: #ffc95c; emissiveIntensity: 1"></a-sphere>
+        <a-sphere position="-6.4 3.92 0.85" radius="0.16" color="#ffe6a0" material="emissive: #ffb84a; emissiveIntensity: 1"></a-sphere>
+        <a-sphere position="6.4 3.92 0.85" radius="0.16" color="#ffe6a0" material="emissive: #ffb84a; emissiveIntensity: 1"></a-sphere>
+        <a-sphere position="-4.55 3.92 -0.02" radius="0.14" color="#ffcdd2" material="emissive: #ff8796; emissiveIntensity: 0.8"></a-sphere>
+        <a-sphere position="4.55 3.92 -0.02" radius="0.14" color="#cfe9ff" material="emissive: #79bcff; emissiveIntensity: 0.8"></a-sphere>
+      </a-entity>
+
+      <a-entity position="-7 1.7 2"
+        animation="property: position; to: -4 2.5 1; dur: 5000; easing: easeInOutSine; dir: alternate; loop: true">
+        <a-sphere position="-0.08 0 0" radius="0.09" rotation="0 0 25" scale="1.4 0.65 0.3" color="#f2b7d5"></a-sphere>
+        <a-sphere position="0.08 0 0" radius="0.09" rotation="0 0 -25" scale="1.4 0.65 0.3" color="#f2b7d5"></a-sphere>
+        <a-cylinder position="0 0 0" radius="0.025" height="0.16" color="#4f463f"></a-cylinder>
+      </a-entity>
+
+      <a-entity light="type: ambient; intensity: 0.82"></a-entity>
+      <a-entity light="type: directional; intensity: 1.05" position="-4 9 5" color="#fff1c2"></a-entity>
+      <a-entity light="type: point; intensity: 0.42; distance: 16" position="0 5 -3" color="#ffd98a"></a-entity>
 
       <a-camera position="0 2.65 4.8" rotation="-5 0 0" look-controls></a-camera>
     </a-scene>
